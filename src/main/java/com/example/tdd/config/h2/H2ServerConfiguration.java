@@ -1,4 +1,4 @@
-package com.example.tdd.config;
+package com.example.tdd.config.h2;
 
 import com.zaxxer.hikari.HikariDataSource;
 import java.sql.SQLException;
