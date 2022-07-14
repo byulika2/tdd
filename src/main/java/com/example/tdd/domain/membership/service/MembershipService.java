@@ -6,7 +6,6 @@ import com.example.tdd.domain.membership.controller.response.MembershipResponse;
 import com.example.tdd.domain.membership.repository.MembershipRepository;
 import com.example.tdd.model.enum_type.MembershipErrorResult;
 import com.example.tdd.model.enum_type.MembershipType;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +17,8 @@ public class MembershipService {
 
   public MembershipResponse addMembership(final String userId, final MembershipType membershipType,
       final Integer point) {
-    final Optional<Membership> result = membershipRepository.findByUserIdAndMembershipType(userId, membershipType);
-    if (result.isPresent()) {
+    final Membership result = membershipRepository.findByUserIdAndMembershipType(userId, membershipType);
+    if (result != null) {
       throw new MembershipException(MembershipErrorResult.DUPLICATED_MEMBERSHIP_REGISTER);
     }
 

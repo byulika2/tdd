@@ -12,7 +12,6 @@ import com.example.tdd.config.exception.MembershipException;
 import com.example.tdd.domain.membership.Membership;
 import com.example.tdd.domain.membership.controller.response.MembershipResponse;
 import com.example.tdd.domain.membership.repository.MembershipRepository;
-import com.example.tdd.model.enum_type.MembershipErrorResult;
 import com.example.tdd.model.enum_type.MembershipType;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
